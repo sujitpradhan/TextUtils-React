@@ -38,7 +38,7 @@ export default function TextForm(props) {
     }
 
     const textLengthExtractor = () =>{
-        return text.trim().split(" ").filter(element => element.length !== 0).length;
+        return text.trim().split(/\s+/).filter(element => element.length !== 0).length;
     }
 
     const [text, setText] = useState('');
